@@ -39,11 +39,11 @@ app.get('/books/:id' , (req,res) =>{
     if(!book) res.status(404).send('Book not found  ');
     res.json(book);
 });
-
+// +books.length + 1,
 //route to create a new book
 app.post('/books' , (req,res) => {
     const book = {
-        id: books.length + 1,
+        id: req.body.id,
         title : req.body.title,
         author : req.body.author
     };
