@@ -43,7 +43,7 @@ app.get('/books/:id' , (req,res) =>{
 //route to create a new book
 app.post('/books' , (req,res) => {
     const book = {
-        id: req.body.id,
+        id: books.length+1,
         title : req.body.title,
         author : req.body.author
     };
