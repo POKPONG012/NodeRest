@@ -36,8 +36,8 @@ app.get('/books',(req,res) => {
 //route to get a book by id
 app.get('/books/:id' , (req,res) =>{
     const book = books.find(b => b.id === parseInt(req.params.id));
-    if(!book) res.status(404).send('Book not found');
-    res.json(book);
+    if(!book) res.status(404).send('Book not found  ');
+    res(book);
 });
 
 //route to create a new book
